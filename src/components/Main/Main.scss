@@ -1,0 +1,100 @@
+.main{
+    max-width: 1200px;
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    margin: 0 auto;
+    background-color: #E0FFFF;
+    padding: 50px 50px;
+
+    &__product-filter{
+        max-width: 350px;
+        width: 100%;
+        height: 32px;
+        outline: none;
+        padding: 0 5px;
+        color: #424242;
+        font-size: 16px;
+        margin-right: 50px;
+        &-label{
+            line-height: 30px;
+            font-size: 24px;
+            display: inline-block;
+        }
+    }
+    
+    &__form{
+        margin-bottom: 30px;
+    }
+
+    &__to-create{
+        height: 40px;
+        max-width: 220px;
+        width: 100%;
+        border-radius: 4px;
+        background-color: #4682B4;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        font-size: 21px;
+        color: #212121;
+        padding: 0;
+        transition: all 0.5s;
+        &:hover{
+            color: aquamarine;
+        }
+        margin-bottom: 30px;
+    }
+
+    &__product-list{
+        margin-bottom: 30px;
+        min-height: 300px;
+    }
+
+    &__product-page{
+        height: 40px;
+        width: 40px;
+        display: inline-block;
+        background-color:#4682B4;
+        text-align: center;
+        cursor: pointer;
+        line-height: 40px;
+        margin-right: 10px;
+        border-radius: 4px;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        font-size: 21px;
+        color: #212121;
+        padding: 0;
+        transition: all 0.5s;
+        &:hover{
+            color: aquamarine;
+        }
+    }
+
+    &__product-item{
+        display: block;
+        background-color: #ffffff;
+        margin-bottom: 15px;
+    }
+
+    &__btn{
+        cursor: pointer;
+        background-color: #4682B4;
+        outline: none;
+        border: none;
+        border-radius: 4px;
+        margin-right: 10px;
+        width: 100px;
+        height: 32px;
+        font-size: 14px;
+        color: #212121;
+        padding: 0;
+        transition: all 0.5s;
+        &:hover{
+            color: aquamarine;
+        }
+    }
+}
+
