@@ -6,10 +6,10 @@ export const CardsWithFilter = ({ page, productsOnPage, products, isLoading }) =
 	const [filter, setFilter] = useState('');
 
 	const handleFilter = (e) => {
-		const value = e.target.value;
+		const filterValue = e.target.value;
 
-		if (value) {
-			setFilter(value);
+		if (filterValue) {
+			setFilter(filterValue);
 		} else {
 			setFilter('');
 		}

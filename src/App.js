@@ -15,7 +15,7 @@ function App() {
 				<Route path="/" component={Main} exact />
 				<Route path="/creating" component={CreateView} />
 				<Route path={`/:id`} component={EditView} />
-				<Redirect to="/" />
+				<Redirect to="/#1" />
 			</Switch>
 		</>
 	);

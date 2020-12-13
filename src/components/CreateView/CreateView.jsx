@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './CreateView.css';
+import { addProduct } from '../../api/api';
 
 export const CreateView = () => {
 	const [title, setTitle] = useState('');
 	const [price, setPrice] = useState('');
-	const [description, setDescription] = useState('');
+	const [description, setDescription] = useState('Nothing');
 
 	const handleTitle = (e) => {
 		const value = e.target.value;
@@ -33,14 +34,29 @@ export const CreateView = () => {
 		if (value) {
 			setDescription(value);
 		} else {
-			setDescription('');
+			setDescription('Nothing');
 		}
 	};
 
 	const handleSave = (e) => {
 		e.preventDefault();
 
-		console.log(title, price, description);
+		const randomId = Math.random().toString(36).substring(2);
+
+		const newProduct = {
+			id: randomId,
+			title,
+			price,
+			description,
+			inCart: false,
+		};
+
+		if (title && price) {
+			addProduct(newProduct);
+			alert('Product added to products');
+		} else {
+			alert('Something went wrong');
+		}
 	};
 
 	return (
@@ -82,14 +98,14 @@ export const CreateView = () => {
 							onChange={handleDescription}
 						/>
 						<button className="create__save" type="submit">
-							SAVE
+							Сохранить
 						</button>
 					</form>
 					<span className="create__description-text">Description: {description}</span>
 				</div>
 
 				<Link to="/#1" className="create__save">
-					Сохранить
+					Назад к продуктам
 				</Link>
 			</div>
 		</>

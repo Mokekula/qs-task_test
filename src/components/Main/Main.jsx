@@ -20,7 +20,6 @@ export const Main = () => {
 
 	return (
 		<div className="main">
-			{/* <Link to="/creating" className="main__to-create">Create View</Link> */}
 			<Link to="/creating" className="main__to-create" products={products}>
 				Create View
 			</Link>
