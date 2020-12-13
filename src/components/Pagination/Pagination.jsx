@@ -1,10 +1,23 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import './Pagination.css';
+import { Link, useHistory } from 'react-router-dom';
 
 export const Pagination = ({ setPage, productsOnPage, products }) => {
+	let history = useHistory();
+
 	const handlePage = (e) => {
 		e.preventDefault();
-		setPage(Number(e.target.id));
+		setPage(e.target.id);
+		history.push(`#${e.target.id}`);
 	};
+
+	useEffect(() => {
+		const page = history.location.hash.slice(1);
+
+		setPage(page);
+	}, []);
+
+	// async в юз эффекте
 
 	const pageNumbers = [];
 
@@ -20,5 +33,9 @@ export const Pagination = ({ setPage, productsOnPage, products }) => {
 		);
 	});
 
-	return <ul className="main__product-pagination">{showPageNumbers}</ul>;
+	return (
+		<>
+			<ul className="main__product-pagination">{showPageNumbers}</ul>
+		</>
+	);
 };

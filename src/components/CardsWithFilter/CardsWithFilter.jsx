@@ -1,14 +1,18 @@
 import React, { useState } from 'react';
 import { Cards } from '../Cards/Cards';
+import './CardsWithFilter.css';
 
 export const CardsWithFilter = ({ page, productsOnPage, products, isLoading }) => {
-	const [filter, setFilter] = useState(null);
+	const [filter, setFilter] = useState('');
 
 	const handleFilter = (e) => {
 		const value = e.target.value;
+
 		if (value) {
 			setFilter(value);
-		} else setFilter(null);
+		} else {
+			setFilter('');
+		}
 	};
 
 	return (

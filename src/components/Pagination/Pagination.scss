@@ -1,0 +1,23 @@
+.main{
+    &__product-page{
+        height: 40px;
+        width: 40px;
+        display: inline-block;
+        background-color:#4682B4;
+        text-align: center;
+        cursor: pointer;
+        line-height: 40px;
+        margin-right: 10px;
+        border-radius: 4px;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        font-size: 21px;
+        color: #212121;
+        padding: 0;
+        transition: all 0.5s;
+        &:hover{
+            color: aquamarine;
+        }
+    }
+}
