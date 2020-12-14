@@ -8,9 +8,9 @@ export const EditView = (props) => {
 	const [title, setTitle] = useState('');
 	const [price, setPrice] = useState('');
 	const [description, setDescription] = useState('');
-
 	let history = useHistory();
 
+	//Получение одного продукта по его айди
 	useEffect(async () => {
 		const productId = props.location.pathname.slice(1);
 		const oneProduct = await getOneProduct(productId);
@@ -18,6 +18,7 @@ export const EditView = (props) => {
 		setProduct(oneProduct);
 	}, []);
 
+	//Сохранение изменений и переход на первую страничку продуктов
 	const handleSave = (e) => {
 		e.preventDefault();
 
@@ -40,6 +41,7 @@ export const EditView = (props) => {
 			});
 	};
 
+	//Установка титула (бренда) продукта
 	const handleTitle = (e) => {
 		const value = e.target.value;
 
@@ -50,6 +52,7 @@ export const EditView = (props) => {
 		}
 	};
 
+	//Установка цены продукта
 	const handlePrice = (e) => {
 		const value = e.target.value;
 
@@ -60,6 +63,7 @@ export const EditView = (props) => {
 		}
 	};
 
+	//Установка описания продукта
 	const handleDescription = (e) => {
 		const value = e.target.value;
 
@@ -70,6 +74,7 @@ export const EditView = (props) => {
 		}
 	};
 
+	//Рендер странички редактирования продукта
 	return (
 		<>
 			<div className="edit">
@@ -113,7 +118,7 @@ export const EditView = (props) => {
 						/>
 
 						<button className="edit__save" onClick={handleSave}>
-							Изменить
+							Edit
 						</button>
 					</form>
 				</div>

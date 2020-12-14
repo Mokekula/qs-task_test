@@ -7,9 +7,9 @@ export const CreateView = () => {
 	const [title, setTitle] = useState('');
 	const [price, setPrice] = useState('');
 	const [description, setDescription] = useState('Nothing');
-
 	let history = useHistory();
 
+	//Установка титула (бренда) продукта
 	const handleTitle = (e) => {
 		const value = e.target.value;
 
@@ -20,6 +20,7 @@ export const CreateView = () => {
 		}
 	};
 
+	//Установка цены продукта
 	const handlePrice = (e) => {
 		const value = e.target.value;
 
@@ -30,6 +31,7 @@ export const CreateView = () => {
 		}
 	};
 
+	//Установка описания продукта
 	const handleDescription = (e) => {
 		const value = e.target.value;
 
@@ -40,6 +42,8 @@ export const CreateView = () => {
 		}
 	};
 
+	//Сохранение нового продукта через POST запрос, по введенным в инпутах данным и с генерацией случайного айди
+	//Переход на первую страничку продуктов после сохранения
 	const handleSave = (e) => {
 		e.preventDefault();
 
@@ -70,6 +74,7 @@ export const CreateView = () => {
 		}
 	};
 
+	//Рендер странички создания нового продукта
 	return (
 		<>
 			<div className="create">
@@ -110,14 +115,14 @@ export const CreateView = () => {
 						/>
 
 						<button className="create__save" type="submit" onClick={handleSave}>
-							Сохранить
+							Save
 						</button>
 					</form>
 					<span className="create__description-text">Description: {description}</span>
 				</div>
 
 				<Link to="/#1" className="create__save">
-					Назад к продуктам
+					Back to products
 				</Link>
 			</div>
 		</>

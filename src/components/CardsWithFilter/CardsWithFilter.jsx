@@ -5,6 +5,7 @@ import './CardsWithFilter.css';
 export const CardsWithFilter = ({ page, productsOnPage, products, isLoading }) => {
 	const [filter, setFilter] = useState('');
 
+	//Установка фильтра в зависимости от того, что написано в инпуте фильтра
 	const handleFilter = (e) => {
 		const filterValue = e.target.value;
 
@@ -15,6 +16,7 @@ export const CardsWithFilter = ({ page, productsOnPage, products, isLoading }) =
 		}
 	};
 
+	//Рендер инпута фильтра и списка продуктов с учетом фильтра
 	return (
 		<>
 			<form className="main__form">

@@ -143,7 +143,7 @@
     {
       "id": "4vmnypukttv",
       "title": "Ferrari",
-      "price": "300",
+      "price": "3001",
       "description": "Nothing",
       "inCart": false
     },
@@ -159,6 +159,13 @@
       "title": "Lamba",
       "price": "222",
       "description": "123",
+      "inCart": false
+    },
+    {
+      "id": "wopp3h34qh8",
+      "title": "Audi",
+      "price": "250",
+      "description": "Lorem :P",
       "inCart": false
     }
   ],

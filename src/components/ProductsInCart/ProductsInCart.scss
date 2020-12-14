@@ -1,0 +1,53 @@
+.cart{
+    &__list{
+        line-height: 26px;
+    }
+
+    &__item{
+        margin-bottom: 30px;
+        background-color: #ffffff;
+        padding: 35px;
+        margin-right: 30px;
+        max-width: 520px;
+        width: 100%;
+        display: inline-block;
+    }
+
+    &__total-products{
+        font-size: 18px;
+    }
+
+    &__btns{
+        margin: 15px 0;
+    }
+
+    &__del-btn{
+        width: 100px;
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    &__del-btn,&__counter{
+        cursor: pointer;
+        background-color: #4682B4;
+        outline: none;
+        border: none;
+        border-radius: 4px;
+        width: 100px;
+        height: 32px;
+        font-size: 14px;
+        color: #212121;
+        padding: 0;
+        transition: all 0.5s;
+        text-align: center;
+        line-height: 30px;
+        &:hover{
+            color: aquamarine;
+        }
+    }
+
+    &__counter{
+        margin-right: 15px;
+        width: 50px;
+    }
+}

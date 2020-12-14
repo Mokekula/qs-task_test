@@ -6,14 +6,15 @@ import { Pagination } from '../Pagination/Pagination';
 import { CardsWithFilter } from '../CardsWithFilter/CardsWithFilter';
 
 export const Main = () => {
-	//ДОБАВИТЬ КОММЕНТЫ ВЕЗДЕ
+	//TODO: ДОБАВИТЬ КОММЕНТЫ ВЕЗДЕ
 	const [products, setProducts] = useState([]);
 	const [page, setPage] = useState(1);
 	const [isLoading, setLoading] = useState(true);
 	const productsOnPage = 10;
 
-	//Вместо асинк эвейтов промиссы и then
+	//TODO: Вместо асинк эвейтов промиссы и then в юз эффектах
 
+	//Получение всего списка продуктов
 	useEffect(async () => {
 		const productsArr = await getProducts();
 
@@ -21,10 +22,14 @@ export const Main = () => {
 		setLoading(false);
 	}, []);
 
+	//Рендер основной странички
 	return (
 		<div className="main">
 			<Link to="/creating" className="main__to-create" products={products}>
 				Create View
+			</Link>
+			<Link to="/cart" className="main__to-cart" products={products}>
+				Cart
 			</Link>
 			<CardsWithFilter
 				page={page}

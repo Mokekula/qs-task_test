@@ -1,4 +1,4 @@
-.main{
+.cart{
     max-width: 1200px;
     width: 100%;
     height: auto;
@@ -7,7 +7,7 @@
     background-color: #E0FFFF;
     padding: 50px 50px;
 
-    &__to-create, &__to-cart{
+    &__to-products{
         height: 40px;
         max-width: 220px;
         width: 100%;
@@ -28,9 +28,8 @@
         line-height: 38px;
     }
 
-    &__to-cart{
-        margin-left: 30px;
-        max-width: 100px;
+    &__total-price{
+        font-size: 18px;
+        font-weight: 500;
     }
 }
-
