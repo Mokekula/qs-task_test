@@ -53,10 +53,18 @@ export const CreateView = () => {
 			inCart: false,
 		};
 
+		async function loadCreateProduct() {
+			return await addProduct(newProduct);
+		}
+
 		if (title && price) {
-			addProduct(newProduct);
-			alert('Product added to products');
-			history.push(`/#1`);
+			loadCreateProduct()
+				.then(() => {
+					history.push(`/#1`);
+				})
+				.catch((error) => {
+					console.log(error);
+				});
 		} else {
 			alert('Something went wrong');
 		}

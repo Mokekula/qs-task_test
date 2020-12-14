@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import './EditView.css';
 import { getOneProduct, editProduct } from '../../api/api';
 
@@ -27,9 +27,17 @@ export const EditView = (props) => {
 			description: description ? description : product.description,
 		};
 
-		editProduct(product.id, changedProduct);
+		async function loadEditProduct() {
+			return await editProduct(product.id, changedProduct);
+		}
 
-		history.push(`/#1`);
+		loadEditProduct()
+			.then(() => {
+				history.push(`/#1`);
+			})
+			.catch((error) => {
+				console.log(error);
+			});
 	};
 
 	const handleTitle = (e) => {

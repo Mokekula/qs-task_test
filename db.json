@@ -3,8 +3,8 @@
     {
       "id": "jgdf34ixzq6",
       "title": "BMW",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, qui?",
-      "price": 150,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, qui?!",
+      "price": "123",
       "inCart": false
     },
     {
@@ -122,7 +122,7 @@
     {
       "id": "w8qt6kzb04a",
       "title": "React",
-      "price": "9999",
+      "price": "222",
       "description": "Nothing",
       "inCart": false
     },
@@ -136,106 +136,29 @@
     {
       "id": "ksn9ptpck3",
       "title": "React",
+      "price": "322",
+      "description": "Nothing",
+      "inCart": false
+    },
+    {
+      "id": "4vmnypukttv",
+      "title": "Ferrari",
+      "price": "300",
+      "description": "Nothing",
+      "inCart": false
+    },
+    {
+      "id": "f10185rrra",
+      "title": "BMWss",
       "price": "9999",
       "description": "Nothing",
       "inCart": false
     },
     {
-      "id": "3tlcy6qwrle",
-      "title": "Ferrari",
-      "price": "432",
-      "description": "Nothing",
-      "inCart": false
-    },
-    {
-      "id": "wrsb4fw586q",
-      "title": "Ferrari",
-      "price": "9999",
-      "description": "Nothing",
-      "inCart": false
-    },
-    {
-      "id": "q6i77wn599",
-      "title": "Ferrari",
-      "price": "9999",
-      "description": "Nothing",
-      "inCart": false
-    },
-    {
-      "id": "saraguj9r2s",
-      "title": "Ferrari",
-      "price": "9999",
-      "description": "Nothing",
-      "inCart": false
-    },
-    {
-      "id": "xjbtibrrqe8",
-      "title": "Ferrari",
-      "price": "9999",
-      "description": "Nothing",
-      "inCart": false
-    },
-    {
-      "id": "tp84wq2dapq",
-      "title": "Ferrari",
-      "price": "9999",
-      "description": "Nothing",
-      "inCart": false
-    },
-    {
-      "id": "81k0geg1i7o",
-      "title": "Ferrari",
-      "price": "9999",
-      "description": "Nothing",
-      "inCart": false
-    },
-    {
-      "id": "vokbejr97sm",
-      "title": "Ferrari",
-      "price": "9999",
-      "description": "Nothing",
-      "inCart": false
-    },
-    {
-      "id": "xw9xqsw734",
-      "title": "Ferrari",
-      "price": "9999",
-      "description": "Nothing",
-      "inCart": false
-    },
-    {
-      "id": "pcp3n65w11",
-      "title": "Ferrari",
-      "price": "9999",
-      "description": "Nothing",
-      "inCart": false
-    },
-    {
-      "id": "33qtltevu3a",
-      "title": "Ferrari",
-      "price": "9999",
-      "description": "Nothing",
-      "inCart": false
-    },
-    {
-      "id": "dnfyibwfeeh",
-      "title": "Mazda",
-      "price": "420",
-      "description": "Notehing",
-      "inCart": false
-    },
-    {
-      "id": "tf9fzw4vtse",
-      "title": "React",
-      "price": "4324",
-      "description": "432",
-      "inCart": false
-    },
-    {
-      "id": "sa2tqb1klfh",
-      "title": "Audi",
-      "price": "250",
-      "description": ":)",
+      "id": "vdw6m1yuy38",
+      "title": "Lamba",
+      "price": "222",
+      "description": "123",
       "inCart": false
     }
   ],
