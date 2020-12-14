@@ -12,6 +12,8 @@ export const Main = () => {
 	const [isLoading, setLoading] = useState(true);
 	const productsOnPage = 10;
 
+	//Вместо асинк эвейтов промиссы и then
+
 	useEffect(async () => {
 		const productsArr = await getProducts();
 		setProducts(productsArr);

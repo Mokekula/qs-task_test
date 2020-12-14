@@ -17,8 +17,6 @@ export const Pagination = ({ setPage, productsOnPage, products }) => {
 		setPage(page);
 	}, []);
 
-	// async в юз эффекте
-
 	const pageNumbers = [];
 
 	for (let i = 1; i <= Math.ceil(products.length / productsOnPage); i++) {

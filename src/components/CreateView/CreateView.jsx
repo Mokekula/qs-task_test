@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import './CreateView.css';
 import { addProduct } from '../../api/api';
 
@@ -7,6 +7,8 @@ export const CreateView = () => {
 	const [title, setTitle] = useState('');
 	const [price, setPrice] = useState('');
 	const [description, setDescription] = useState('Nothing');
+
+	let history = useHistory();
 
 	const handleTitle = (e) => {
 		const value = e.target.value;
@@ -54,6 +56,7 @@ export const CreateView = () => {
 		if (title && price) {
 			addProduct(newProduct);
 			alert('Product added to products');
+			history.push(`/#1`);
 		} else {
 			alert('Something went wrong');
 		}
@@ -97,7 +100,8 @@ export const CreateView = () => {
 							className="create__text"
 							onChange={handleDescription}
 						/>
-						<button className="create__save" type="submit">
+
+						<button className="create__save" type="submit" onClick={handleSave}>
 							Сохранить
 						</button>
 					</form>

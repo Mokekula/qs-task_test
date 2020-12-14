@@ -24,3 +24,19 @@ export const deleteProduct = (id) => {
 		},
 	}).catch((error) => console.log(error));
 };
+
+export const getOneProduct = (id) => {
+	return fetch(`http://localhost:3000/products/${id}`)
+		.then((res) => res.json())
+		.catch((error) => console.error(error));
+};
+
+export const editProduct = (id, product) => {
+	return fetch(`http://localhost:3000/products/${id}`, {
+		method: 'PATCH',
+		headers: {
+			'Content-Type': 'application/json',
+		},
+		body: JSON.stringify(product),
+	}).catch((error) => console.log(error));
+};
