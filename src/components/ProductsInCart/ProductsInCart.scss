@@ -1,8 +1,4 @@
 .cart{
-    &__list{
-        line-height: 26px;
-    }
-
     &__item{
         margin-bottom: 30px;
         background-color: #ffffff;
@@ -24,7 +20,7 @@
     &__del-btn{
         width: 100px;
         display: block;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
     }
 
     &__del-btn,&__counter{

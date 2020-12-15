@@ -25,7 +25,7 @@ export const CreateView = () => {
 		const value = e.target.value;
 
 		if (value && value.match(/^[0-9]+$/)) {
-			setPrice(value);
+			setPrice(+value);
 		} else {
 			setPrice('');
 		}

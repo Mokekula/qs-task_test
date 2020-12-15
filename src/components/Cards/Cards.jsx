@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Cards.css';
 import { Link } from 'react-router-dom';
-import { deleteProduct } from '../../api/api';
+import { deleteProduct, editProduct, addToCart } from '../../api/api';
 
 export const Cards = ({ page, productsOnPage, products, filter }) => {
 	//TODO: УДАЛЕНИЕ
@@ -36,15 +36,41 @@ export const Cards = ({ page, productsOnPage, products, filter }) => {
 			return await deleteProduct(e.target.id);
 		}
 
-		loadCreateProduct();
+		loadCreateProduct().catch((error) => console.log(error));
 	};
 
-	//TODO:Добавление в карту
-	const handleAddCart = () => {
-		console.log(`Add cart`);
+	//Добавление в карту
+	const handleAddCart = (e) => {
+		const id = e.target.id;
+		const thisProduct = products.filter((product) => product.id === id);
+
+		const productToCart = {
+			id,
+			title: thisProduct[0].title,
+			price: thisProduct[0].price,
+			description: thisProduct[0].description,
+			quantinity: 1,
+		};
+
+		async function editAddedCard() {
+			return await editProduct(id, {
+				inCart: true,
+			});
+		}
+
+		async function addProductToCart() {
+			return await addToCart(productToCart);
+		}
+
+		addProductToCart().catch((error) => console.log(error));
+
+		editAddedCard()
+			.then(() => {
+				alert('Added to cart');
+			})
+			.catch((error) => console.log(error));
 	};
 	//TODO: Мб юз эфект который меняет какоето значение (где написанно сколько всего продуктов) при этом следит за имзенением курент продукт ???
-	//Если product.inCart: true, то Add to Cart неактивна
 
 	//Рендер продукта
 	return currentProducts.map((product) => (
@@ -59,7 +85,11 @@ export const Cards = ({ page, productsOnPage, products, filter }) => {
 				<button className="main__btn" onClick={handleDelete} id={product.id}>
 					Delete
 				</button>
-				<button className="main__btn" onClick={handleAddCart}>
+				<button
+					className="main__btn"
+					disabled={product.inCart}
+					id={product.id}
+					onClick={handleAddCart}>
 					Add to cart
 				</button>
 			</div>

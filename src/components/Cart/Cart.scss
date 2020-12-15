@@ -7,6 +7,10 @@
     background-color: #E0FFFF;
     padding: 50px 50px;
 
+    &__list{
+        line-height: 26px;
+    }
+    
     &__to-products{
         height: 40px;
         max-width: 220px;

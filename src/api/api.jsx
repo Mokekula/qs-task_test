@@ -71,3 +71,13 @@ export const getCart = () => {
 		.then((res) => res.json())
 		.catch((error) => console.error(error));
 };
+
+export const editProductInCart = (id, product) => {
+	return fetch(`http://localhost:3000/cart/${id}`, {
+		method: 'PATCH',
+		headers: {
+			'Content-Type': 'application/json',
+		},
+		body: JSON.stringify(product),
+	}).catch((error) => console.log(error));
+};

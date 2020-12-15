@@ -11,11 +11,18 @@ export const EditView = (props) => {
 	let history = useHistory();
 
 	//Получение одного продукта по его айди
-	useEffect(async () => {
+	useEffect(() => {
 		const productId = props.location.pathname.slice(1);
-		const oneProduct = await getOneProduct(productId);
 
-		setProduct(oneProduct);
+		async function fetchGetOneProduct() {
+			return await getOneProduct(productId);
+		}
+
+		fetchGetOneProduct()
+			.then((res) => {
+				setProduct(res);
+			})
+			.catch((error) => console.log(error));
 	}, []);
 
 	//Сохранение изменений и переход на первую страничку продуктов
@@ -57,7 +64,7 @@ export const EditView = (props) => {
 		const value = e.target.value;
 
 		if (value && value.match(/^[0-9]+$/)) {
-			setPrice(value);
+			setPrice(+value);
 		} else {
 			setPrice('');
 		}

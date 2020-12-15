@@ -15,11 +15,17 @@ export const Main = () => {
 	//TODO: Вместо асинк эвейтов промиссы и then в юз эффектах
 
 	//Получение всего списка продуктов
-	useEffect(async () => {
-		const productsArr = await getProducts();
+	useEffect(() => {
+		async function fetchGetProducts() {
+			return await getProducts();
+		}
 
-		setProducts(productsArr);
-		setLoading(false);
+		fetchGetProducts()
+			.then((res) => {
+				setProducts(res);
+				setLoading(false);
+			})
+			.catch((error) => console.log(error));
 	}, []);
 
 	//Рендер основной странички
