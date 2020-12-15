@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #87CEFA;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+  
+li {
+    margin: 0;
+    padding: 0;
+}
+  
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+  
+h1,
+h2,
+h3 {
+    margin: 0;
+}

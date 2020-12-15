@@ -1,39 +1,25 @@
 {
   "products": [
     {
-      "id": "bix27468fjc",
-      "title": "Audi",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, qui?",
-      "price": 100,
-      "inCart": true
-    },
-    {
       "id": "jgdf34ixzq6",
       "title": "BMW",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, qui?",
-      "price": 150,
-      "inCart": false
-    },
-    {
-      "id": "ox98i1f5idg",
-      "title": "Citroen",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, qui?",
-      "price": 200,
-      "inCart": false
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, qui?!",
+      "price": 1233,
+      "inCart": true
     },
     {
       "id": "adv62bxeq9i",
       "title": "Lexus",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, qui?",
       "price": 250,
-      "inCart": false
+      "inCart": true
     },
     {
       "id": "yp5hqdyqh9b",
       "title": "Mazda",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, qui?",
       "price": 300,
-      "inCart": false
+      "inCart": true
     },
     {
       "id": "e79ep31aiwk",
@@ -54,7 +40,7 @@
       "title": "Peugeot",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, qui?",
       "price": 450,
-      "inCart": false
+      "inCart": true
     },
     {
       "id": "b5vcuhjp8r9",
@@ -118,15 +104,92 @@
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, qui?",
       "price": 900,
       "inCart": false
+    },
+    {
+      "id": "w8qt6kzb04a",
+      "title": "React",
+      "price": 444,
+      "description": "Nothing",
+      "inCart": false
+    },
+    {
+      "id": "wxksio0c0dr",
+      "title": "React",
+      "price": 32,
+      "description": "Nothing",
+      "inCart": false
+    },
+    {
+      "id": "4vmnypukttv",
+      "title": "Ferrari",
+      "price": 300,
+      "description": "Nothing",
+      "inCart": false
+    },
+    {
+      "id": "f10185rrra",
+      "title": "BMWss",
+      "price": 333,
+      "description": "Nothing",
+      "inCart": false
+    },
+    {
+      "id": "vdw6m1yuy38",
+      "title": "Lamba",
+      "price": 2222,
+      "description": "123",
+      "inCart": false
+    },
+    {
+      "id": "wopp3h34qh8",
+      "title": "Audi",
+      "price": 350,
+      "description": "Lorem :P",
+      "inCart": false
+    },
+    {
+      "id": "51qt9fgh2rr",
+      "title": "React",
+      "price": 132,
+      "description": "Nothing",
+      "inCart": false
+    },
+    {
+      "id": "m0uczjdfos",
+      "title": "React",
+      "price": 9999,
+      "description": "Ok",
+      "inCart": false
     }
   ],
   "cart": [
     {
-      "id": "bix27468fjc",
-      "title": "Audi",
+      "id": "adv62bxeq9i",
+      "title": "Lexus",
+      "price": 250,
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, qui?",
-      "price": 100,
-      "quantity": 1
+      "quantinity": 40
+    },
+    {
+      "id": "jop3ymxur9",
+      "title": "Peugeot",
+      "price": 450,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, qui?",
+      "quantinity": 1
+    },
+    {
+      "id": "yp5hqdyqh9b",
+      "title": "Mazda",
+      "price": 300,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, qui?",
+      "quantinity": 2
+    },
+    {
+      "id": "jgdf34ixzq6",
+      "title": "BMW",
+      "price": 1233,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, qui?!",
+      "quantinity": 1
     }
   ]
 }
