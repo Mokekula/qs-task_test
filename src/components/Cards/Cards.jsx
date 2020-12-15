@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import { deleteProduct, editProduct, addToCart } from '../../api/api';
 
 export const Cards = ({ page, productsOnPage, products, filter }) => {
-	//TODO: УДАЛЕНИЕ
 	const [currentProducts, setCurrentProducts] = useState([]);
 
 	//Вычисление номера первого и последнего продукта на страничке
@@ -70,7 +69,6 @@ export const Cards = ({ page, productsOnPage, products, filter }) => {
 			})
 			.catch((error) => console.log(error));
 	};
-	//TODO: Мб юз эфект который меняет какоето значение (где написанно сколько всего продуктов) при этом следит за имзенением курент продукт ???
 
 	//Рендер продукта
 	return currentProducts.map((product) => (
